@@ -56,13 +56,13 @@ spec:
         volumeMounts:
         - name: mongodb
           mountPath: /data/db
-# this is PVC
-volumeClaimTemplates:
-  - metadata:
-      name: mongodb
-    spec:
-      accessModes: ["ReadWriteOnce"]
-      StorageClassName: "roboshop-ebs"
-      resources:
-        request:
-          storage: 5Gi
+  # this is PVC
+  volumeClaimTemplates:
+    - metadata:
+        name: mongodb
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        storageClassName: "roboshop-ebs"
+        resources:
+          requests:
+            storage: 5Gi
