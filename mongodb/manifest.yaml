@@ -26,9 +26,9 @@ spec:
     project: roboshop
     tier: db
   ports:
-    protocol: TCP
-    port: 27017 #service port
-    targetPort: 27017 #container port
+    - protocol: TCP
+      port: 27017 #service port
+      targetPort: 27017 #container port
 ---
 apiVersion: apps/v1
 kind: StatefulSet
