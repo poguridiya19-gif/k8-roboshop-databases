@@ -73,13 +73,13 @@ spec:
         - name: mysql-config
           configMap:
             name: mysql
-# this is pvc
-volumeClaimTemplates:
-- metadata:
-    name: mysql
-  spec:
-    accessModes: [ "ReadWriteOnce" ]
-    storageClassName: "roboshop-ebs"
-    resources:
-      requests:
-        storage: 1Gi
+  # this is pvc
+  volumeClaimTemplates:
+  - metadata:
+      name: mysql
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      storageClassName: "roboshop-ebs"
+      resources:
+        requests:
+          storage: 1Gi
