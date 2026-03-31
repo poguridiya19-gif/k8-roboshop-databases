@@ -10,9 +10,9 @@ spec:
     component: redis
     tier: db
   ports:
-    protocol: TCP
-    port: 6379 # service port
-    targetPort: 6379 # container port
+    - protocol: TCP
+      port: 6379 # service port
+      targetPort: 6379 # container port
 ---
 apiVersion: v1
 kind: Service
@@ -26,9 +26,9 @@ spec:
     component: redis
     tier: db
   ports:
-    protocol: TCP
-    port: 6379 # service port
-    targetPort: 6379 # container port
+    - protocol: TCP
+      port: 6379 # service port
+      targetPort: 6379 # container port
 ---
 apiVersion: apps/v1
 kind: StatefulSet
