@@ -31,7 +31,7 @@ spec:
     targetPort: 6379 # container port
 ---
 apiVersion: apps/v1
-kind: statefulSet
+kind: StatefulSet
 metadata: 
   name: redis
   namespace: roboshop
