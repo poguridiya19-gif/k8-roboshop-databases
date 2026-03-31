@@ -1,6 +1,6 @@
 # service , headless service , statefulset, pvc
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: redis
   namespace: roboshop
@@ -30,7 +30,7 @@ spec:
     port: 6379 # service port
     targetPort: 6379 # container port
 ---
-apiVersion: v1
+apiVersion: apps/v1
 kind: statefulSet
 metadata: 
   name: redis
