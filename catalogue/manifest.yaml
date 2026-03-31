@@ -95,7 +95,7 @@ spec:
   minReplicas: 1
   maxReplicas: 10
   metrics: 
-  - type: resource
+  - type: Resource
     resource:
       name: cpu
       target:
